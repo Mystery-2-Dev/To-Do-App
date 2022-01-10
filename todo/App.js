@@ -9,13 +9,13 @@ export default class App extends React.Component{
           <View style={{flexDirection:"row"}}>
              <View style={styles.divider}/>
       <Text style={styles.title}>
-        Todo <Text style={{fontWeight: "300",color:colors.blue}}>Lists</Text>
+        Todo <Text style={{fontWeight: "300",color:colors.orange}}>Lists</Text>
       </Text>
       <View style={styles.divider}/>
       </View>
       <View style={{marginVertical:48}}>
         <TouchableOpacity> 
-          <Icon name="plus" size={20} color={colors.blue}/>
+          <Icon name="plus" size={20} color={colors.orange}/>
         </TouchableOpacity>
       </View>
       </View>
