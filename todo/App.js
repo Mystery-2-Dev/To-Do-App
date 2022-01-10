@@ -14,9 +14,10 @@ export default class App extends React.Component{
       <View style={styles.divider}/>
       </View>
       <View style={{marginVertical:48}}>
-        <TouchableOpacity> 
+        <TouchableOpacity style={styles.addList}> 
           <Icon name="plus" size={20} color={colors.orange}/>
         </TouchableOpacity>
+        <Text style={styles.add}>Add List</Text>
       </View>
       </View>
     );
@@ -29,8 +30,8 @@ const styles=StyleSheet.create({
     alignItems:"center",
     justifyContent:"center"
   },
-  diviider:{
-    backgroundColor:colors.lightBlue,
+  divider:{
+    backgroundColor:colors.lightblue,
     height:1,
     flex:1,
     alignSelf:"center"
@@ -40,6 +41,19 @@ const styles=StyleSheet.create({
       fontWeight:"800",
       color:colors.black,
        paddingHorizontal:64
+    },
+    addList:{
+      borderWidth:2,
+      borderColor:colors.orange,
+      borderRadius:4,
+      padding:16,
+      alignItems:"center",
+      justifyContent:"center"
+    },
+    add:{
+      color:colors.orange,
+      fontWeight:"600",
+      fontSize:14,
+      marginTop:8
     }
-
 });
