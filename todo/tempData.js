@@ -38,5 +38,41 @@ todos:[
          completed: true
     }
 ]
- }
+ },
+ {
+    name: "Family Picnic",
+   color: "#24A6D9",
+   todos:[
+       {
+            title: "Get Balloons",
+            completed: false
+       },
+       {
+            title: "Send Invitations",
+            completed: true
+       },
+       {
+            title: "Make Dinner Reservations",
+            completed: true
+       }
+   ]
+    },
+    {
+        name: "Family Time",
+       color: "#ffff00",
+       todos:[
+           {
+                title: "Get Balloons",
+                completed: false
+           },
+           {
+                title: "Send Invitations",
+                completed: true
+           },
+           {
+                title: "Make Dinner Reservations",
+                completed: true
+           }
+       ]
+        }
 ];

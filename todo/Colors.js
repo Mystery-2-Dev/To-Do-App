@@ -3,6 +3,7 @@ export default colors={
     blue:"#24A6D9",
     lightblue:"#A7CBD9",
     white:"#FFFFFF",
-    orange:"#ff4500"
+    orange:"#ff4500",
+    yellow:"#ffff00"
     
 };
