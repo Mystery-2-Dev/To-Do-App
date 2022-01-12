@@ -11,4 +11,14 @@ export default TodoList=({list})=>{
     );
 };
 
-
+const styles = StyleSheet.create({
+    listContainer:{
+        paddingVertical:32,
+        paddingHorizontal:16,
+        borderRadius:20,
+        marginHorizontal:15,
+        alignItems:"center",
+        width:200
+        
+    }
+})
