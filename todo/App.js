@@ -1,7 +1,9 @@
 import React from 'react';
-import {StyleSheet , Text, TouchableOpacity, View} from "react-native"
-import colors from "./Colors"
+import {StyleSheet , Text, TouchableOpacity, View,FlatList} from "react-native";
+import colors from "./Colors";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import tempData from './tempData';
+import TodoList from "./components/TodoList";
 export default class App extends React.Component{
   render(){
     return(
@@ -19,6 +21,17 @@ export default class App extends React.Component{
         </TouchableOpacity>
         <Text style={styles.add}>Add List</Text>
       </View>
+      <View style={{height:275,paddingLeft:32}}>
+        <FlatList 
+        data={tempData} 
+        keyExtractor={item=>item.name} 
+        horizontal={true} 
+        showsHorizontalScrollIndicator={false} 
+        renderItem={({item})=>
+        <TodoList list={item} />
+          }
+        />
+      </View>
       </View>
     );
   }
@@ -31,7 +44,7 @@ const styles=StyleSheet.create({
     justifyContent:"center"
   },
   divider:{
-    backgroundColor:colors.lightblue,
+    backgroundColor:colors.orange,
     height:1,
     flex:1,
     alignSelf:"center"
@@ -45,7 +58,7 @@ const styles=StyleSheet.create({
     addList:{
       borderWidth:2,
       borderColor:colors.orange,
-      borderRadius:4,
+      borderRadius:12,
       padding:16,
       alignItems:"center",
       justifyContent:"center"
@@ -54,6 +67,6 @@ const styles=StyleSheet.create({
       color:colors.orange,
       fontWeight:"600",
       fontSize:14,
-      marginTop:8
+      marginTop:10
     }
 });
