@@ -11,6 +11,7 @@ export default TodoList=({list})=>{
     );
 };
 
+
 const styles = StyleSheet.create({
     listContainer:{
         paddingVertical:32,
