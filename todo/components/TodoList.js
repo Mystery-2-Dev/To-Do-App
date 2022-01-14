@@ -1,5 +1,6 @@
 import React from 'react'
 import {StyleSheet,Text,View} from 'react-native'
+import Colors from '../Colors';
 
 export default TodoList=({list})=>{
     return(
@@ -19,7 +20,12 @@ const styles = StyleSheet.create({
         borderRadius:20,
         marginHorizontal:15,
         alignItems:"center",
-        width:200
-        
+        width:200  
+    },
+    listTitle:{
+        fontSize:20,
+        fontWeight:"700",
+        color:colors.white,
+        marginBottom:18
     }
-})
+});
