@@ -31,7 +31,7 @@ todos:[
     },
     {
          title: "Send Invitations",
-         completed: true
+         completed: false
     },
     {
          title: "Make Dinner Reservations",
@@ -45,15 +45,15 @@ todos:[
    todos:[
        {
             title: "Get Balloons",
-            completed: false
+            completed: true
        },
        {
             title: "Send Invitations",
-            completed: true
+            completed: false
        },
        {
             title: "Make Dinner Reservations",
-            completed: true
+            completed: false
        }
    ]
     },

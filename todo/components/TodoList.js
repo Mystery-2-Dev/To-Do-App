@@ -4,22 +4,24 @@ import {StyleSheet,Text,View} from 'react-native'
 import Colors from '../Colors';
 
 export default TodoList=({list})=>{
+    const completedCount=list.todos.filter(todo =>todo.completed).length;
+    const remainingCount=list.todos.length-completedCount;
     return(
         <View style={[styles.listContainer,{backgroundColor:list.color}]}>
             <Text style={styles.listTitle} numberOfLines={1}>
                 {list.name}
             </Text>
+
             <View>
             <View stles={{alignItems: "center"}}>
-             <Text style={styles.count}>0</Text>
+             <Text style={styles.count}>{completedCount}</Text>
              <Text style={styles.subtitle}>Remaining</Text>
             </View>
             <View stles={{alignItems: "center"}}>
-             <Text style={styles.count}>0</Text>
+             <Text style={styles.count}>{remainingCount}</Text>
              <Text style={styles.subtitle}>Completed</Text>
-
             </View>
-        </View>
+         </View>
         </View>
     );
 };
