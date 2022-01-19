@@ -16,9 +16,7 @@ export default class App extends React.Component{
     return(
       <View style={styles.container}>
         <Modal animationType="slide" visible={this.state.addTodoVisible} onRequestClose={() =>this.toggleAddTodoModal()}>
-          <View>
-            <Text>I'm a Modal! :)</Text>
-            </View>
+          <AddListModal />
           </Modal> 
           <View style={{flexDirection:"row"}}>
              <View style={styles.divider}/>
