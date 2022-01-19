@@ -4,6 +4,7 @@ import colors from "./Colors";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import tempData from './tempData';
 import TodoList from "./components/TodoList";
+import AddListModal from './components/AddListModal';
 export default class App extends React.Component{
   state={
     addTodoVisible: false
