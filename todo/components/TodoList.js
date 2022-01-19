@@ -37,18 +37,18 @@ const styles = StyleSheet.create({
         width:200  
     },
     listTitle:{
-        fontSize:20,
+        fontSize:22,
         fontWeight:"700",
         color:Colors.white,
         marginBottom:18
     },
     count:{
-        fontSize:48,
+        fontSize:50,
         fontWeight:"200",
         color:Colors.white
     },
     subtitle:{
-        fontSize:12,
+        fontSize:15,
         fontWeight:"700",
         color:Colors.white
     }

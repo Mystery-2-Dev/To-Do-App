@@ -5,5 +5,5 @@ export default colors={
     white:"#FFFFFF",
     orange:"#ff4500",
     green:"#32cd32"
-
+    
 };
