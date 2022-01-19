@@ -14,7 +14,7 @@ export default class App extends React.Component{
   render(){
     return(
       <View style={styles.container}>
-        <Modal animationType="slide" visible={this.state.addTodoVisible}>
+        <Modal animationType="slide" visible={this.state.addTodoVisible} onRequestClose={() =>this.toggleAddTodoModal()}>
           <View>
             <Text>I'm a Modal! :)</Text>
             </View>
