@@ -6,7 +6,7 @@ export default class AddListModal extends React.Component {
   render() {
     return (
       <KeyboardAvoidingView style={styles.container} behaviour= "padding">
-          <TouchableOpacity style={{position: "absolute",top:64,right:32}}>
+          <TouchableOpacity style={{position: "absolute",top:64,right:32}} onPress={this.props.closeModal}>
           <Icon name="close" size={25} color={colors.black}/>
           </TouchableOpacity>
       </KeyboardAvoidingView>
