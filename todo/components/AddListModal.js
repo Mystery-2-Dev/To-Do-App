@@ -8,6 +8,15 @@ export default class AddListModal extends React.Component {
   state={
     name: " ",
     color:this.backgroundColor[0]
+  };
+  renderColors() {
+    return this.backgroundColor.map(color=>{
+      return(
+        <TouchableOpacity key={color} style={[styles.colorSelect,{backgroundColor:color}]}
+        onPress={()=>this.setState({color})}
+        />
+      )
+    })
   }
   render() {
     return (
@@ -21,6 +30,10 @@ export default class AddListModal extends React.Component {
             <TextInput style={styles.input} placeholder="List Name"
             onChangeText={text =>this.setState({name:text})}
             />
+
+            <View style={{flexDirection:"row",justifyContent:"space-between" , marginTop:12}}>
+              {this.renderColors()}
+            </View>
             <TouchableOpacity style={[styles.create, {backgroundColor:this.state.color}]}>
               <Text style={{color:colors.white,fontWeight:"600"}}>Create</Text>
             </TouchableOpacity>
@@ -58,5 +71,10 @@ const styles = StyleSheet.create({
       borderRadius:6,
       alignItems:"center",
       justifyContent:"center"
+    },
+    colorSelect:{
+      width:30,
+      height:30,
+      borderRadius:4
     }
 });
