@@ -8,7 +8,11 @@ export default class AddListModal extends React.Component {
       <KeyboardAvoidingView style={styles.container} behaviour= "padding">
           <TouchableOpacity style={{position: "absolute",top:64,right:32}} onPress={this.props.closeModal}>
           <Icon name="close" size={25} color={colors.black}/>
+
           </TouchableOpacity>
+          <View style={{alignSelf:"stretch",marginHorizontal:32}}>
+            <Text style={styles.title}>Create Todo List</Text>
+          </View>
       </KeyboardAvoidingView>
     );
   }
