@@ -2,6 +2,7 @@ import { Text, StyleSheet, View, KeyboardAvoidingView, TouchableOpacity, TextInp
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import colors from "../Colors";
+import tempData from '../tempData';
 export default class AddListModal extends React.Component {
   backgroundColor=["#5CD859", "#24A6D9" ,"#595BD9", "#8022D9", "#D159D8", "#D85963", "#D88559"];
 
@@ -9,6 +10,17 @@ export default class AddListModal extends React.Component {
     name: " ",
     color:this.backgroundColor[0]
   };
+  createTodo =() => {
+    const {name,color} = this.state 
+
+    tempData.push({
+      name,
+      color,
+      todos:[]
+    })
+    this.setState({name:""})
+    this.props.classModal();
+  }
   renderColors() {
     return this.backgroundColor.map(color=>{
       return(
@@ -34,7 +46,7 @@ export default class AddListModal extends React.Component {
             <View style={{flexDirection:"row",justifyContent:"space-between" , marginTop:12}}>
               {this.renderColors()}
             </View>
-            <TouchableOpacity style={[styles.create, {backgroundColor:this.state.color}]}>
+            <TouchableOpacity style={[styles.create, {backgroundColor:this.state.color}]} onPress={this.createTodo}>
               <Text style={{color:colors.white,fontWeight:"600"}}>Create</Text>
             </TouchableOpacity>
           </View>
