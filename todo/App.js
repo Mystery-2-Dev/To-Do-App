@@ -39,6 +39,7 @@ export default class App extends React.Component{
         showsHorizontalScrollIndicator={false} 
         renderItem={({item})=>
         <TodoList list={item} />
+        
           }
         />
       </View>
