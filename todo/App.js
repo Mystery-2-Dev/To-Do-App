@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  FlatList,
-  Modal,
-} from 'react-native';
+import {StyleSheet,Text,TouchableOpacity,View,FlatList,Modal} from 'react-native';
 import colors from './Colors';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import tempData from './tempData';
