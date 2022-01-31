@@ -3,27 +3,38 @@ import React from 'react'
 import {StyleSheet,Text,View} from 'react-native'
 import Colors from '../Colors';
 
-export default TodoList=({list})=>{
-    const completedCount=list.todos.filter(todo =>todo.completed).length;
-    const remainingCount=list.todos.length-completedCount;
-    return(
-        <View style={[styles.listContainer,{backgroundColor:list.color}]}>
-            <Text style={styles.listTitle} numberOfLines={1}>
-                {list.name}
-            </Text>
-
-            <View>
-            <View stles={{alignItems: "center"}}>
-             <Text style={styles.count}>{completedCount}</Text>
-             <Text style={styles.subtitle}>Remaining</Text>
+export default class TodoList extends React.Component{
+   state={
+       showListVisible:false
+   }
+   toggleListModal(){
+         this.setState({showListVisible:!this.state.showListVisible});
+   }
+    render(){
+        const list = this.props.list;
+        const completedCount=list.todos.filter(todo =>todo.completed).length;
+        const remainingCount=list.todos.length-completedCount;
+    
+        return(
+            <View style={[styles.listContainer,{backgroundColor:list.color}]}>
+                <Text style={styles.listTitle} numberOfLines={1}>
+                    {list.name}
+                </Text>
+    
+                <View>
+                <View stles={{alignItems: "center"}}>
+                 <Text style={styles.count}>{completedCount}</Text>
+                 <Text style={styles.subtitle}>Remaining</Text>
+                </View>
+                <View stles={{alignItems: "center"}}>
+                 <Text style={styles.count}>{remainingCount}</Text>
+                 <Text style={styles.subtitle}>Completed</Text>
+                </View>
+             </View>
             </View>
-            <View stles={{alignItems: "center"}}>
-             <Text style={styles.count}>{remainingCount}</Text>
-             <Text style={styles.subtitle}>Completed</Text>
-            </View>
-         </View>
-        </View>
-    );
+        );
+    }
+    
 };
 
 
