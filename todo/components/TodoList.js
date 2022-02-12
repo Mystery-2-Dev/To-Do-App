@@ -2,6 +2,7 @@ import { colors } from '@material-ui/core';
 import React from 'react'
 import {StyleSheet,Text,TouchableOpacity,View,Modal} from 'react-native'
 import Colors from '../Colors';
+import TodoModal from './TodoModal';
 
 export default class TodoList extends React.Component{
    state={
@@ -18,9 +19,7 @@ export default class TodoList extends React.Component{
         return(
             <View>
                 <Modal animationType="slide" visible={this.state.showListVisible} onRequestClose={() =>this.toggleListModal()}>
-                    <View>
-                        <Text>List Modal</Text>
-                    </View>
+                    <TodoModal list={list} closeModal={() =>this.toggleListModal()} />
                 </Modal>
                 <TouchableOpacity style={[styles.listContainer,{backgroundColor:list.color}]}
                 onPress={() =>this.toggleListModal()}>
