@@ -2,6 +2,7 @@ import { Text, View ,StyleSheet, SafeAreaView, TouchableOpacity, FlatList, Keybo
 import React, { Component } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import colors from '../Colors';
+//import Icons from 'react-native-ionicons'
 export default class TodoModal extends React.Component {
      state ={
          name:this.props.list.name,
@@ -11,7 +12,9 @@ export default class TodoModal extends React.Component {
 renderTodo =todo => {
     return(
      <View style={[styles.todoContainer]}>
-         <Text>{todo.title}</Text>
+         <TouchableOpacity>
+           <Icon name="square-check" size={24} color={colors.gray} style={{width:32}}/>
+         </TouchableOpacity>
      </View>
     );
 };
