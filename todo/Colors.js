@@ -4,6 +4,8 @@ export default colors={
     lightblue:"#A7CBD9",
     white:"#FFFFFF",
     orange:"#ff4500",
-    green:"#32cd32"
+    green:"#32cd32",
+    gray:"#95989A",
+    liteGray:"#E0E0E0",
     
 };
