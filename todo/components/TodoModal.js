@@ -2,26 +2,28 @@ import { Text, View ,StyleSheet, SafeAreaView, TouchableOpacity, FlatList, Keybo
 import React, { Component } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import colors from '../Colors';
-//import Icons from 'react-native-ionicons'
+import { ToolbarAndroid } from 'react-native';
+import Symbol from 'react-native-vector-icons/Foundation';
+
 export default class TodoModal extends React.Component {
-     state ={
-         name:this.props.list.name,
+     state = {
+            name:this.props.list.name,
             color:this.props.list.color,
             todos:this.props.list.todos
      };
 renderTodo =todo => {
     return(
-     <View style={[styles.todoContainer]}>
+    <View style={[styles.todoContainer]}>
          <TouchableOpacity>
-           <Icon name="square-check" size={24} color={colors.gray} style={{width:32}}/>
+         <Symbol name="checkbox" size={25} color={colors.black}/>
          </TouchableOpacity>
      </View>
     );
 };
 
     render() {
-        const taskCount=this.state.todos.length;
-        const completedCount=this.state.todos.filter(todo =>todo.completed).length;
+        const taskCount = this.state.todos.length;
+        const completedCount = this.state.todos.filter(todo =>todo.completed).length;
     return (
      <SafeAreaView style={styles.container}>
             <TouchableOpacity style={{position: "absolute",top:64,right:32,zIndex:10}} onPress={this.props.closeModal}>
