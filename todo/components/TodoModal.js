@@ -15,8 +15,9 @@ renderTodo =todo => {
     return(
     <View style={[styles.todoContainer]}>
          <TouchableOpacity>
-         <Symbol name="checkbox" size={25} color={colors.black}/>
+         <Symbol name={todo.completed ? "checkbox" : "checkbox-outline"} size={25} color={colors.black} style={{width: 32}}/>
          </TouchableOpacity>
+         <Text style={[styles.todo,{textDecorationLine:todo.completed ? 'line-through' : 'none', color:todo.completed ? colors.gray : colors.black}]}>{todo.title}</Text>
      </View>
     );
 };
@@ -106,5 +107,10 @@ const styles = StyleSheet.create({
         paddingVertical:16,
         flexDirection:"row",
         alignItems:"center",
+     },
+     todo:{
+        fontSize:15,
+        color:colors.black,
+        fontWeight:"600",
      }
 });

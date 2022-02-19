@@ -6,8 +6,8 @@ import tempData from '../tempData';
 export default class AddListModal extends React.Component {
   backgroundColor=["#5CD859", "#24A6D9" ,"#595BD9", "#8022D9", "#D159D8", "#D85963", "#D88559"];
 
-  state={
-    name: " ",
+  state = {
+    name: "",
     color:this.backgroundColor[0]
   };
   createTodo =() => {
