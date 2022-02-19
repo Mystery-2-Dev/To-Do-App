@@ -8,6 +8,7 @@ import AddListModal from './components/AddListModal';
 export default class App extends React.Component {
   state = {
     addTodoVisible: false,
+    lists: tempData,
   };
   toggleAddTodoModal() {
     this.setState({addTodoVisible: !this.state.addTodoVisible});
@@ -42,7 +43,7 @@ export default class App extends React.Component {
         </View>
         <View style={{height: 275, paddingLeft: 32}}>
           <FlatList
-            data={tempData}
+            data={this.state.lists}
             keyExtractor={item => item.name}
             horizontal={true}
             showsHorizontalScrollIndicator={false}
